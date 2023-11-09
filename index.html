@@ -26,14 +26,12 @@
     <header>
       <div class="container header-container">
         <a href="./index.html" class="link"
-          ><img src="./images/logo.svg" width="186px" alt="Nordpay logo"
+          ><img class="logo" src="./images/logo.png" alt="Nordpay logo"
         /></a>
         <nav>
           <ul class="list nav-list">
             <li>
-              <a class="link nav-link" href="#about_us" class="afa"
-                >About us</a
-              >
+              <a class="link nav-link" href="#about_us" class="afa">About us</a>
             </li>
             <li>
               <a class="link nav-link" href="#services">Services</a>
@@ -44,16 +42,35 @@
           </ul>
         </nav>
         <a class="link button" href="#contact">Support</a>
+        <button type="button" class="burger" data-modal-open></button>
+      </div>
+      <div class="background-menu is-hidden" id="mobileMenu" data-modal>
+        <div class="mob-menu">
+          <button type="button" class="mobile-closed" data-modal-close></button>
+          <ul class="list mobile-menu-list">
+            <li class="mobile-menu-item">
+              <a class="link mobile-menu-link" href="/index.html#about_us"
+                >About us</a
+              >
+            </li>
+            <li class="mobile-menu-item">
+              <a class="link mobile-menu-link" href="#services">Services</a>
+            </li>
+            <li class="mobile-menu-item">
+              <a class="link mobile-menu-link" href="#contact">Сontact us</a>
+            </li>
+          </ul>
+          <a class="link button menu-button" href="#contact">Support</a>
+        </div>
       </div>
     </header>
     <!-- /Header  -->
-<main>
+    <main>
       <section class="hero-section">
         <div class="container hero-container">
           <div class="left-column">
             <h1 class="h1">
-              From Point of <br />
-              Sale to Every
+              From Point of Sale to Every
               <span class="purple-h1">Business Dream</span>
             </h1>
             <p class="hero-p">
@@ -67,9 +84,9 @@
             <div class="img-full-thumb">
               <div class="img-thumb">
                 <img
-                  src="./images/group_barista.svg"
+                  class="hero-img"
+                  src="./images/barista.png"
                   alt="laughing barista"
-                  width="560px"
                 />
               </div>
             </div>
@@ -138,7 +155,9 @@
                   leo cursus. Pharetra quisque sit elementum integer iaculis
                   amet.
                 </p>
-                <a class="learn-more" href="#contact" class="link">learn more</a>
+                <a class="learn-more" href="#contact" class="link"
+                  >learn more</a
+                >
               </div>
             </li>
             <li class="service-list-item">
@@ -161,7 +180,9 @@
                   leo cursus. Pharetra quisque sit elementum integer iaculis
                   amet.
                 </p>
-                <a class="learn-more" href="#contact" class="link">learn more</a>
+                <a class="learn-more" href="#contact" class="link"
+                  >learn more</a
+                >
               </div>
             </li>
             <li class="service-list-item">
@@ -181,7 +202,9 @@
                   leo cursus. Pharetra quisque sit elementum integer iaculis
                   amet.
                 </p>
-                <a class="learn-more" href="#contact" class="link">learn more</a>
+                <a class="learn-more" href="#contact" class="link"
+                  >learn more</a
+                >
               </div>
             </li>
             <li class="service-list-item">
@@ -201,7 +224,9 @@
                   leo cursus. Pharetra quisque sit elementum integer iaculis
                   amet.
                 </p>
-                <a class="learn-more" href="#contact" class="link">learn more</a>
+                <a class="learn-more" href="#contact" class="link"
+                  >learn more</a
+                >
               </div>
             </li>
             <li class="service-list-item">
@@ -221,14 +246,16 @@
                   leo cursus. Pharetra quisque sit elementum integer iaculis
                   amet.
                 </p>
-                <a class="learn-more" href="#contact" class="link">learn more</a>
+                <a class="learn-more" href="#contact" class="link"
+                  >learn more</a
+                >
               </div>
             </li>
           </ul>
         </div>
       </section>
       <!-- Mission -->
-<section class="section-mission">
+      <section class="section-mission">
         <div class="container mission-container">
           <h2 class="h2 mission-h2">
             Our mission is to be a service that offers everything
@@ -245,11 +272,11 @@
           <h2 class="h2">We are always in touch with you</h2>
           <div class="contact-form">
             <div class="form">
-              <form class="input-form">
+              <form class="input-form" action="mailto:chumakvolv@gmail.com">
                 <div class="form-input"><input class="input" placeholder="Name" type="text" name="Name" /></div>
                 <div class="form-input"><input class="input" placeholder="Phone" type="tel" name="Phone" /></div>
                 <div class="form-input"><input class="input" placeholder="Email" type="email" name="Email" /></div>
-                <div class="form-input"><input class="input" placeholder="Message" type="text" name="Text" id="" /></div>
+                <div class="form-input"><input class="input inp-bfr-lm" placeholder="Message" type="text" name="Text" id="" /></div>
                 <button type="submit" class="learn-more">Submit</button>
               </form>
             </div>
@@ -278,7 +305,7 @@
     </main>
     <footer class="footer">
       <div class="container">
-        <ul class="footer-list list"><li><a href="./index.html"><img class='footer-logo' src="./images/footer_logo.png" alt="NordPay"></a>
+        <ul class="footer-list list"><li class="footer-social-list-first"><a href="./index.html"><img class='footer-logo' src="./images/footer_logo.png" alt="NordPay"></a>
         <ul class="footer-social-list list">
           <li><a href="facebook.com"><svg class="footer-social-icons facebook-icon">
             <use href="./images/footer-social/symbol-defs.svg#icon-facebook"></use>
@@ -305,5 +332,7 @@
       </div>
       <p class="copyright">Copyright © 2023 NordPay. All rights reserved</p>
     </footer>
+    <script src="./modal.js"></script>
+    <script src="./mobile.js"></script>
   </body>
 </html>
